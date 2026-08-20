@@ -1,11 +1,18 @@
 /**
- * Test Data Seed Script
+ * Test Data Seed Description
  *
- * Description: This script populates the application's backend database with initial
- * mock data required for development and testing. It generates dummy user profiles,
- * sample team competitions, and randomized leaderboard scores.
+ * This script connects to the MongoDB database configured by MONGODB_URI, or to
+ * the local octofit_db database when no connection string is provided. Before
+ * inserting data, it clears the activities, leaderboard, teams, users, and
+ * workouts collections so each run produces a predictable development dataset.
  *
- * Execution Command: npm run seed (or ts-node seed.ts)
+ * The generated mock data includes four student mock profiles, two teams with
+ * assigned members, six dated activities across several exercise types, and
+ * team leaderboard records with points and ranks. It also creates three workout
+ * recommendations covering beginner, intermediate, and advanced difficulty.
+ *
+ * Execute from the backend folder with `npm run seed`, or from the repository
+ * root with `npm --prefix octofit-tracker/backend run seed`.
  */
 
 import mongoose from 'mongoose';

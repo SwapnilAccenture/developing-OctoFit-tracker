@@ -1,3 +1,13 @@
+/**
+ * Test Data Seed Script
+ *
+ * Description: This script populates the application's backend database with initial
+ * mock data required for development and testing. It generates dummy user profiles,
+ * sample team competitions, and randomized leaderboard scores.
+ *
+ * Execution Command: npm run seed (or ts-node seed.ts)
+ */
+
 import mongoose from 'mongoose';
 import { Activity, Leaderboard, Team, User, Workout } from '../models/index.js';
 
